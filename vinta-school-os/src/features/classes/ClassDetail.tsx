@@ -27,6 +27,7 @@ import {
   getInitials,
 } from '../../lib/formatters'
 import { getTeacherEmail } from '../../lib/teacherEmails'
+import { teacherSubjectOf } from '../../lib/teacherSubject'
 import { formatDa, formatDuration } from '../../lib/formatters'
 import { classStateOf } from '../../lib/classState'
 import { DayPicker } from '../../components/ui/DayPicker'
@@ -321,7 +322,7 @@ export default function ClassDetail({ cls, isOpen, onClose, onDelete, onUpdated 
   const [saving, setSaving] = useState(false)
 
   // ── Teachers ──
-  const [teachers, setTeachers] = useState<Array<{ id: string; name: string; email?: string; phone?: string }>>([])
+  const [teachers, setTeachers] = useState<Array<{ id: string; name: string; email?: string; phone?: string; subject?: string }>>([])
 
   // ── Enrolled students ──
   const [enrolledStudents, setEnrolledStudents] = useState<EnrolledStudent[]>([])
@@ -428,6 +429,7 @@ export default function ClassDetail({ cls, isOpen, onClose, onDelete, onUpdated 
           name: t.full_name || t.name || `${t.first_name} ${t.last_name}`,
           email: t.email ?? getTeacherEmail(t.id) ?? undefined,
           phone: t.phone,
+          subject: teacherSubjectOf(t),
         })))
       })
       .catch(() => {})
@@ -543,6 +545,22 @@ export default function ClassDetail({ cls, isOpen, onClose, onDelete, onUpdated 
       seedEditTimes(schedules)
     }
   }, [cls, schedules, seedEditTimes])
+
+  /**
+   * Reassigning the group to another teacher also moves its subject: a teacher
+   * teaches one subject, so the two fields describe the same fact.
+   *
+   * Only a subject the picker actually offers is applied — `Select` matches its
+   * options strictly, so a subject outside the list would render the field
+   * blank while the save carried the value.
+   */
+  const handleEditTeacherChange = useCallback((id: string) => {
+    setEditTeacherId(id)
+    const picked = teachers.find((t) => t.id === id)
+    if (picked?.subject && (SUBJECT_OPTIONS as readonly string[]).includes(picked.subject)) {
+      setEditSubject(picked.subject)
+    }
+  }, [teachers])
 
   const handleSaveEdit = useCallback(async () => {
     if (!cls || !editName.trim()) return
@@ -880,7 +898,7 @@ export default function ClassDetail({ cls, isOpen, onClose, onDelete, onUpdated 
                     <label className="text-xs font-medium text-[var(--muted)] mb-1 block">Teacher</label>
                     <Select
                       value={editTeacherId}
-                      onChange={setEditTeacherId}
+                      onChange={handleEditTeacherChange}
                       options={[
                         { value: '', label: 'None' },
                         ...teachers.map(t => ({ value: t.id, label: t.name })),

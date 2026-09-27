@@ -375,47 +375,16 @@ export function DashboardPage() {
     afterSessionChange()
   }, [afterSessionChange])
 
-  // T3 hamburger: Start Class from the ☰ menu = same early-start path.
-  const handleStartFromMenu = useCallback((session: Session) => {
-    setSelectedSession(session)
-    setCheckInSession(session)
-    bumpLifecycle()
-    void postSessionStart(session).then(afterSessionChange)
-  }, [postSessionStart, bumpLifecycle, afterSessionChange])
-
   const handleFinalizeSuccess = useCallback(() => {
     setFinalizeSession(null)
     afterSessionChange()
   }, [afterSessionChange])
 
-  const handleTogglePresence = useCallback(async (studentId: string) => {
-    if (!selectedSession) return
-    // T1 lock: presence toggles are dead while SCHEDULED (grid is locked anyway).
-    if (!canOpenAttendance(getEffectiveStatus(selectedSession))) return
-    // Optimistic toggle
-    setStudents(prev => prev.map(s =>
-      s.student_id === studentId ? { ...s, is_present: !s.is_present } : s
-    ))
-    try {
-      const current = students.find(s => s.student_id === studentId)
-      if (current?.is_present) {
-        // Student is present → check-out (no PIN needed)
-        await api.post('/attendance/check-out', {
-          session_id: selectedSession.id,
-          student_id: studentId,
-        })
-      } else {
-        // Student not present → check-in via PIN modal (handled by SessionDetail)
-        // For now, just update local state; actual check-in needs PIN
-      }
-    } catch {
-      // Revert on failure
-      setStudents(prev => prev.map(s =>
-        s.student_id === studentId ? { ...s, is_present: !s.is_present } : s
-      ))
-    }
-  }, [selectedSession, students])
-
+  // Presence is staged and saved inside the panel itself (SessionDetail),
+  // because the write needs the same PIN the desk types there — see the Save
+  // footer. This page's only job is to hand the panel the roster and to
+  // refetch it once the server has agreed, which `onChanged` does.
+  //
   // Payment status is deliberately NOT cycled here. It was previously a
   // local-only invention with no backend behind it — clicking the pill
   // changed a number that persisted nowhere and disagreed with the
@@ -556,22 +525,19 @@ export function DashboardPage() {
             onToggleView={handleToggleView}
             isLoading={isLoading}
             currentDate={currentDate}
-            onStartSession={handleStartFromMenu}
-            onFinishSession={handleFinishRequest}
-            onSessionsChanged={afterSessionChange}
             onNewClass={(prefillDate) => { setSchedPrefill(prefillDate ?? null); setSchedOpen(true) }}
-            onOpenRegister={(session) => setCheckInSession(session)}
           />
         </div>
 
-        {/* Right Panel — Session Detail or Activity Log (~35%) */}
+        {/* Right Panel — the class presence tab, or the activity log when no
+            class is selected. The tab is the dashboard's management surface:
+            the register, Start/Class Done, and the ☰ for everything else. */}
         <div className="w-full lg:w-[380px] shrink-0 h-[300px] lg:h-full overflow-hidden">
           {selectedSession ? (
             <SessionDetail
               session={selectedSession}
               students={students}
               onClose={handleCloseDetail}
-              onTogglePresence={handleTogglePresence}
               onSessionStarted={handleSessionStarted}
               onFinishRequest={handleFinishRequest}
               onChanged={afterSessionChange}

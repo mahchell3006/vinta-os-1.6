@@ -14,6 +14,7 @@ import { Select } from '../../components/ui/Select'
 import { TimePicker } from '../../components/ui/TimePicker'
 import { Toggle } from '../../components/ui/Toggle'
 import { formatDa, formatDuration } from '../../lib/formatters'
+import { teacherSubjectOf } from '../../lib/teacherSubject'
 import { toast, useUIStore } from '../../stores/uiStore'
 import { SUBJECT_COLORS } from '../../lib/constants'
 import ClassGrid from './ClassGrid'
@@ -79,6 +80,8 @@ type Tab = 'courses' | 'rooms'
 interface TeacherOption {
   id: string
   name: string
+  /** The subject this teacher is registered for, when the profile names one. */
+  subject?: string
 }
 
 /* ═══════════════════════════════════════════════════════
@@ -143,6 +146,7 @@ function AddCourseGroupModal({
           setTeachers(list.map((t: any) => ({
             id: t.id,
             name: t.full_name || [t.first_name, t.last_name].filter(Boolean).join(' ') || 'Unnamed teacher',
+            subject: teacherSubjectOf(t),
           })))
           const subs = subjectRes.data.subjects ?? []
           if (subs.length > 0) {
@@ -186,6 +190,20 @@ function AddCourseGroupModal({
     resetAll()
     onClose()
   }, [onClose, resetAll])
+
+  /**
+   * Choosing a teacher also chooses the subject: a teacher teaches one subject,
+   * and this group is a group of it. Only a subject the picker actually offers
+   * is applied — `Select` matches its options strictly, so a value outside the
+   * list would leave the field blank while the payload carried it.
+   */
+  const handleTeacherChange = useCallback((id: string) => {
+    setTeacherId(id)
+    const picked = teachers.find(t => t.id === id)
+    if (picked?.subject && subjectOptions.includes(picked.subject)) {
+      setSubject(picked.subject)
+    }
+  }, [teachers, subjectOptions])
 
   const handleSubmit = useCallback(() => {
     if (!name.trim()) {
@@ -338,7 +356,7 @@ function AddCourseGroupModal({
                 </label>
                 <Select
                   value={teacherId}
-                  onChange={setTeacherId}
+                  onChange={handleTeacherChange}
                   options={[
                     { value: '', label: '— None —' },
                     ...teachers.map(t => ({ value: t.id, label: t.name })),

@@ -21,6 +21,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { GraduationCap, Loader2 } from 'lucide-react'
 import { cn } from '../../lib/cn'
 import api from '../../lib/api'
+import { teacherSubjectOf } from '../../lib/teacherSubject'
 import { toast } from '../../stores/uiStore'
 import Select from '../../components/ui/Select'
 import {
@@ -59,6 +60,8 @@ export interface ClassQuickCreateProps {
 interface TeacherOption {
   id: string
   name: string
+  /** The subject this teacher is registered for, when the profile names one. */
+  subject?: string
 }
 
 function errMsg(err: unknown, fallback: string): string {
@@ -99,6 +102,7 @@ export function ClassQuickCreate({ onCreated, onCancel }: ClassQuickCreateProps)
               t.full_name ||
               t.name ||
               `${t.first_name ?? ''} ${t.last_name ?? ''}`.trim(),
+            subject: teacherSubjectOf(t),
           })),
         )
         const subs = (sRes.data.subjects ?? []).map((s: any) => s.name).filter(Boolean)
@@ -134,6 +138,26 @@ export function ClassQuickCreate({ onCreated, onCancel }: ClassQuickCreateProps)
       ...teachers.map((t) => ({ value: t.id, label: t.name })),
     ],
     [teachers],
+  )
+
+  /**
+   * Choosing a teacher also chooses the subject: a teacher teaches one subject,
+   * and this group is a group of it — the same reason the session flows derive
+   * a session's teacher from its group.
+   *
+   * Only a subject this school actually lists is applied. `Select` matches its
+   * options strictly, so writing a subject the picker does not offer would
+   * leave the field rendering empty while the payload carried the value — the
+   * same trap the default subject is moved out of on load.
+   */
+  const handleTeacherChange = useCallback(
+    (id: string) => {
+      const teacher = teachers.find((t) => t.id === id)
+      const subject =
+        teacher?.subject && subjects.includes(teacher.subject) ? teacher.subject : undefined
+      patch(subject ? { teacherId: id, subject } : { teacherId: id })
+    },
+    [teachers, subjects, patch],
   )
 
   /** Guards against a second POST before `saving` has re-rendered the button. */
@@ -235,7 +259,7 @@ export function ClassQuickCreate({ onCreated, onCancel }: ClassQuickCreateProps)
           <label className={classLabelCls} style={{ color: 'var(--muted)' }}>Teacher</label>
           <Select
             value={values.teacherId}
-            onChange={(v) => patch({ teacherId: v })}
+            onChange={handleTeacherChange}
             options={teacherOptions}
             placeholder="— None —"
             searchPlaceholder="Search teachers…"

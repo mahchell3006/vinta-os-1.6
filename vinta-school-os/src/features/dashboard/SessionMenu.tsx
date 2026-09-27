@@ -22,6 +22,7 @@
  */
 
 import { useCallback, useEffect, useRef, useState } from 'react'
+import { createPortal } from 'react-dom'
 import {
   Menu,
   Play,
@@ -122,6 +123,24 @@ type ModalKind =
 // Shared modal shell
 // ============================================
 
+/**
+ * The menu's dialogs and its dropdown are the only two surfaces in this app
+ * that still rendered in place while being `position: fixed`, and they are
+ * mounted from panels that put a `backdrop-filter` on their own root — the
+ * dashboard's agenda board and its class-presence tab both do. A filter other
+ * than `none` makes that ancestor the containing block for fixed descendants,
+ * so `fixed inset-0` was measured against the panel instead of the viewport,
+ * and the `overflow-hidden` on the same element then clipped whatever fell
+ * outside it. The visible symptom was the panel's own ☰ opening its dialogs
+ * inside a 380px column, and the agenda board's block-click menu appearing
+ * offset — or, for a block in the last day column, entirely off the clipped
+ * edge, which reads as "the click did nothing".
+ *
+ * Portalling to `document.body` is the fix this codebase already uses for
+ * every other overlay (ui/Modal, Drawer, Select, TimePicker, DayPicker).
+ * Refs and event bubbling survive the portal, so the menu's outside-click and
+ * toggle logic is unchanged.
+ */
 function ModalShell({
   title,
   onClose,
@@ -133,7 +152,7 @@ function ModalShell({
   children: React.ReactNode
   wide?: boolean
 }) {
-  return (
+  return createPortal(
     <div
       className="fixed inset-0 z-[70] flex items-center justify-center"
       style={{ background: 'rgba(10,10,10,.6)', backdropFilter: 'blur(8px)' }}
@@ -165,7 +184,8 @@ function ModalShell({
         </div>
         <div className="flex-1 overflow-y-auto px-5 py-4">{children}</div>
       </div>
-    </div>
+    </div>,
+    document.body,
   )
 }
 
@@ -1275,7 +1295,7 @@ export function SessionMenu({
         </button>
       )}
 
-      {open && (
+      {open && createPortal(
         <div
           ref={menuRef}
           className="fixed z-50 w-52 rounded-xl border border-[var(--glass-border)] bg-[var(--card-bg)] shadow-2xl animate-fade-in overflow-hidden"
@@ -1343,7 +1363,8 @@ export function SessionMenu({
               <MenuItem icon={<ScrollText size={13} />} label="View Log" onClick={() => openModal('log')} />
             </>
           )}
-        </div>
+        </div>,
+        document.body,
       )}
 
       {modal === 'edit' && (

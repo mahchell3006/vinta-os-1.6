@@ -1,49 +1,49 @@
-# Graph Report - vinta-os-app-essembled-main  (2026-09-25)
+# Graph Report - vinta-os-app-essembled-main  (2026-09-27)
 
 ## Corpus Check
-- 255 files · ~211,282 words
+- 256 files · ~212,981 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 13 file(s) not represented in the graph (top: (none) 5, .ini 2, .db 1)
 
 ## Summary
-- 2519 nodes · 6317 edges · 109 communities (79 shown, 30 thin omitted)
+- 2519 nodes · 6333 edges · 117 communities (80 shown, 37 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 378 edges (avg confidence: 0.94)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `8bec1894`
+- Built from commit: `0287abcf`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - extensions.py
 - routes/students.py
-- cn
+- SettingsPage.tsx
 - MultiPaymentError
 - Session
 - schemas/students.py
 - schemas/attendance.py
 - schemas/billing.py
 - User
-- TeacherDrawer.tsx
+- ClassCardMenu.tsx
 - tenant_required
 - vinta-school-os/package.json
 - billing.ts
-- AgendaBoard.tsx
+- WeekView.tsx
 - owner_only
-- Class
-- ClassQuickCreate.tsx
-- BillingPage.tsx
-- billing_service.py
+- Student
+- SessionWindowModal.tsx
+- react
+- format_dzd
 - AcademySettings
-- sessionLifecycle.ts
+- Session
 - SchedulingModal.tsx
-- SessionMenu.tsx
+- BillingConfig.tsx
 - jwt_required
 - routes/settings.py
 - routes/calendar.py
 - TeacherHoursLog
-- BillingConfig.tsx
+- SessionCheckInModal.tsx
 - routes/auth.py
 - schemas/notifications.py
 - env.py
@@ -53,45 +53,54 @@
 - compilerOptions
 - test_cron_jobs.py
 - Academy Root Entity
-- api.ts
+- constants.ts
 - jwt_required
 - routes/teachers.py
 - routes/classes.py
 - DashboardPage.tsx
-- react
+- toast
 - SessionDetail.tsx
-- dependencies
+- StudentDrawer.tsx
 - Luxury School OS Concept
 - formatters.ts
 - PaymentHistoryList.tsx
 - log_activity
 - ClassesPage.tsx
 - ActivityLog.tsx
-- ProfileCard.tsx
-- lucide-react
-- Session
+- student.ts
+- router.tsx
+- cn
 - compilerOptions
 - TestBillingStatusDerivation
 - class.ts
 - add_lifecycle_columns.py
-- devDependencies
-- vite.config.ts
-- scripts
+- SessionMenu.tsx
+- check_overdue_billings
+- providers.tsx
+- uiStore.ts
 - StudentAttendanceCalendar.tsx
 - create_app
+- TestCheckInFlow
 - test_cancel_session.py
-- PayoutRecord
+- calendar.ts
+- billing_service.py
+- SessionBlock.tsx
 - TestHourlyPayroll
+- format_phone
 - schemas/calendar.py
-- scheduling_service.py
+- parse_dzd
+- Class
+- validate_phone
+- week_date_range
+- rawval
 - Avatar.tsx
+- snapshot
 - C-01 Hardcoded Fallback JWT Secret Vulnerability
-- test_attendance_flow.py
 - .oxlintrc.json
-- uiStore.ts
+- TeacherDrawer.tsx
 - ErrorBoundary
 - BillingSummaryCard.tsx
-- audit_service.py
+- get_activity_logs
 - tsconfig.json
 - routes/__init__.py
 - schemas/__init__.py
@@ -115,7 +124,6 @@
 - T8 Scheduling Window (Weekly vs Temporary)
 - Vinta School OS App Icon
 - Vite Tooling Asset
-- student.ts
 - conftest.py
 - routes/notifications.py
 - themeStore.ts
@@ -135,20 +143,20 @@
 6. `User` - 57 edges
 7. `Class` - 53 edges
 8. `Student` - 47 edges
-9. `api` - 41 edges
+9. `api` - 42 edges
 10. `useAuthStore` - 41 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `make_session()` --uses--> `Session`  [INFERRED]
-  .tmp-relprobe/probe_audit_fk.py → Backend/vinta-academy-backend/app/models/scheduling.py
 - `dbval()` --uses--> `AcademySettings`  [INFERRED]
   .tmp-relprobe/probe_billing_rules.py → Backend/vinta-academy-backend/app/models/academy.py
+- `Login Screen Hero Artwork` --conceptually_related_to--> `Glassmorphic Design Tokens (--gold / --emerald)`  [INFERRED]
+  vinta-school-os/src/assets/hero.png → Docs/Notes.md
+- `make_session()` --uses--> `Session`  [INFERRED]
+  .tmp-relprobe/probe_audit_fk.py → Backend/vinta-academy-backend/app/models/scheduling.py
 - `credits_of()` --uses--> `StudentSubscription`  [INFERRED]
   .tmp-relprobe/probe_finalise.py → Backend/vinta-academy-backend/app/models/billing.py
 - `make_session()` --uses--> `Session`  [INFERRED]
   .tmp-relprobe/probe_finalise.py → Backend/vinta-academy-backend/app/models/scheduling.py
-- `make_session()` --uses--> `Session`  [INFERRED]
-  .tmp-relprobe/probe_start.py → Backend/vinta-academy-backend/app/models/scheduling.py
 
 ## Import Cycles
 - None detected.
@@ -157,19 +165,19 @@
 - **Multi-Tenant Core Architecture & Domain Boundaries** — docs_documentation_tenant_isolation_model, docs_documentation_entity_academy, backend_api_architecture_overview, docs_documentation_billing_architecture [EXTRACTED 1.00]
 - **Session Lifecycle & Attendance Grid Flow** — docs_documentation_entity_scheduled_session, docs_documentation_attendance_workflow, vinta_tasks_t1_session_lifecycle_lock, vinta_tasks_t2_false_until_true_attendance [INFERRED 0.85]
 
-## Communities (109 total, 30 thin omitted)
+## Communities (117 total, 37 thin omitted)
 
 ### Community 0 - "extensions.py"
-Cohesion: 0.06
-Nodes (44): Vinta School OS — Extension Initialization Centralized extension instances for…, Vinta School OS — Application Factory Creates and configures the Flask…, Vinta School OS — Attendance Model SessionStudent: tracks check-in/out per…, Vinta School OS — Activity Log & Audit Trail Model Every significant action is…, Vinta School OS — User Model User (Owner/Staff) with PIN hashing, role…, Vinta School OS — Application Entry Point Launches the Flask application with…, bcrypt, flask_cors (+36 more)
+Cohesion: 0.04
+Nodes (86): Vinta School OS — Extension Initialization Centralized extension instances for…, Vinta School OS — Application Factory Creates and configures the Flask…, Vinta School OS — Academy & Tenant Models Academy (tenant root),…, Vinta School OS — Attendance Model SessionStudent: tracks check-in/out per…, Vinta School OS — Activity Log & Audit Trail Model Every significant action is…, PaymentLog, Vinta School OS — Billing Models PaymentPlan, StudentBilling, PaymentLog…, One record per billing cycle per student. Core billing entity. (+78 more)
 
 ### Community 1 - "routes/students.py"
 Cohesion: 0.15
 Nodes (23): add_guardian(), bulk_enroll_students(), create_student(), delete_student(), enroll_student(), get_stats(), get_student(), list_guardians() (+15 more)
 
-### Community 2 - "cn"
-Cohesion: 0.04
-Nodes (82): SettingsPage, PageContainer(), PageContainerProps, Badge, BadgeProps, SemanticVariant, sizeStyles, variantAliases (+74 more)
+### Community 2 - "SettingsPage.tsx"
+Cohesion: 0.08
+Nodes (28): AcademyProfile(), AcademyProfileProps, TERM_OPTIONS, WORKING_DAYS, AddStaffModal(), AddStaffModalProps, inputCls, Appearance() (+20 more)
 
 ### Community 3 - "MultiPaymentError"
 Cohesion: 0.50
@@ -177,7 +185,7 @@ Nodes (3): MultiPaymentError, Exception, A multi-payment could not be recorded �
 
 ### Community 4 - "Session"
 Cohesion: 0.04
-Nodes (82): Many-to-many: Session ↔ Student. Tracks attendance (is_present, check-in/out…, SessionStudent, ActivityLog, Audit trail. Every significant action in the system is logged with user_id —…, A concrete class session on a specific date. Generated from Schedule or created…, Session, absence_consumes_credit(), count_gap_sessions() (+74 more)
+Nodes (90): Many-to-many: Session ↔ Student. Tracks attendance (is_present, check-in/out…, SessionStudent, ActivityLog, Audit trail. Every significant action in the system is logged with user_id —…, A concrete class session on a specific date. Generated from Schedule or created…, Session, absence_consumes_credit(), count_gap_sessions() (+82 more)
 
 ### Community 5 - "schemas/students.py"
 Cohesion: 0.11
@@ -195,61 +203,57 @@ Nodes (51): AgingBucketsResponseSchema, BillingStatsResponseSchema, CreatePlanRe
 Cohesion: 0.06
 Nodes (33): Every person who logs into the system. Owner or Staff., Hash a 4-digit PIN using bcrypt., Verify a PIN against the stored hash., Hash a password using bcrypt., Verify a password against the stored hash., Set a new password hash (owner only)., User, create_owner() (+25 more)
 
-### Community 9 - "TeacherDrawer.tsx"
-Cohesion: 0.06
-Nodes (39): RFC-5322, TeachersPage, AddCourseGroupModal(), AddTeacherModal(), AddTeacherModalProps, COMMISSION_PLACEHOLDER, COMMISSION_SUFFIX, COMMISSION_TYPES (+31 more)
+### Community 9 - "ClassCardMenu.tsx"
+Cohesion: 0.16
+Nodes (17): ClassCardMenu(), EndClassModal(), FreeChip(), isRunning(), NoSessionTrigger(), RunningLight(), RunningLightState, serverMessage() (+9 more)
 
 ### Community 10 - "tenant_required"
 Cohesion: 0.11
 Nodes (41): check_overdue(), create_plan(), finalize_session(), get_aging_buckets(), get_revenue(), get_revenue_chart(), get_stats(), list_payouts() (+33 more)
 
 ### Community 11 - "vinta-school-os/package.json"
-Cohesion: 0.13
-Nodes (14): axios, clsx, oxlint, recharts, tailwind-merge, tailwindcss, @types/node, @types/react (+6 more)
+Cohesion: 0.04
+Nodes (44): axios, clsx, oxlint, ref_path, recharts, tailwind-merge, tailwindcss, @tailwindcss/vite (+36 more)
 
 ### Community 12 - "billing.ts"
-Cohesion: 0.10
-Nodes (20): AgingBucket, BillingRingData, BillingState, BillingStats, CreatePaymentPlanRequest, GroupCharge, MultiPayReceipt, MultiPayRequest (+12 more)
+Cohesion: 0.09
+Nodes (23): PaymentHistoryListProps, UseStudentBillingResult, AgingBucket, BillingRingData, BillingState, BillingStats, CreatePaymentPlanRequest, GroupCharge (+15 more)
 
-### Community 13 - "AgendaBoard.tsx"
-Cohesion: 0.15
-Nodes (32): DayView(), decimalToTime(), snapHour(), toCalendarSession(), yToTime(), hexToRgba(), SessionBlock(), SessionBlockProps (+24 more)
+### Community 13 - "WeekView.tsx"
+Cohesion: 0.19
+Nodes (26): DayView(), decimalToTime(), snapHour(), toCalendarSession(), yToTime(), decimalToTime(), snapHour(), toCalendarSession() (+18 more)
 
 ### Community 14 - "owner_only"
 Cohesion: 0.07
 Nodes (44): add_staff(), _coerce_bool(), deactivate_staff(), delete_staff(), export_data(), get_academy(), get_activity_log(), get_appearance() (+36 more)
 
-### Community 15 - "Class"
+### Community 15 - "Student"
 Cohesion: 0.05
-Nodes (70): Student purchase of a Class offer (credit-based or time-based). Table name is…, StudentSubscription, Class, A subject offering (e.g., 'Math — CM2'). Enrollment target for students., Enrollment, Many-to-many: Student ↔ Class through Enrollment., create_multi_payment(), create_subscription() (+62 more)
+Nodes (56): Enrollment, Many-to-many: Student ↔ Class through Enrollment., A child enrolled in the academy., Student, create_multi_payment(), Create new billing records for students whose cycles have ended. Returns count…, Multi-teacher payment flow: one receipt covering several groups. Creates…, Multi-teacher payment: create separate subscriptions per group. Thin wrapper… (+48 more)
 
-### Community 16 - "ClassQuickCreate.tsx"
-Cohesion: 0.16
-Nodes (18): SessionWindowModalProps, buildClassPayload(), CLASS_COLOR_PRESETS, ClassBillingFields(), classCancelBtnCls, ClassFormValues, classInputCls, classLabelCls (+10 more)
+### Community 16 - "SessionWindowModal.tsx"
+Cohesion: 0.13
+Nodes (23): Select, SelectAction, SelectOption, SelectProps, inputCls, SessionWindowModalProps, buildClassPayload(), CLASS_COLOR_PRESETS (+15 more)
 
-### Community 17 - "BillingPage.tsx"
-Cohesion: 0.09
-Nodes (27): BillingPage, BillingPage(), BillingTab, TABS, FinanceBreakdown(), LineItem, MultiPayModal(), PAYMENT_METHODS (+19 more)
-
-### Community 18 - "billing_service.py"
-Cohesion: 0.04
-Nodes (91): Vinta School OS — Academy & Tenant Models Academy (tenant root),…, PaymentLog, Vinta School OS — Billing Models PaymentPlan, StudentBilling, PaymentLog…, One record per billing cycle per student. Core billing entity., Individual payment transactions against a billing record., StudentBilling, Vinta School OS — Classroom, Class & Subject Models Classroom (physical room),…, Vinta School OS — Model Exports Centralized imports for Flask-Migrate and… (+83 more)
+### Community 17 - "react"
+Cohesion: 0.06
+Nodes (63): lucide-react, react, Badge, BadgeProps, SemanticVariant, sizeStyles, variantAliases, variantStyles (+55 more)
 
 ### Community 19 - "AcademySettings"
 Cohesion: 0.06
 Nodes (33): Academy, AcademySettings, Academy SaaS subscription tier., Top-level tenant entity. One academy = one private school/academy., Per-academy configuration singleton., Subscription, create_academy(), get_academy_profiles() (+25 more)
 
-### Community 20 - "sessionLifecycle.ts"
-Cohesion: 0.10
-Nodes (36): ClassCardMenu(), isRunning(), SessionActions(), SessionActionsProps, SessionMenu(), SessionMenuProps, Listener, subscribe() (+28 more)
+### Community 20 - "Session"
+Cohesion: 0.12
+Nodes (30): DayViewProps, FinalizeSessionModalProps, SchedulingModalProps, SessionCheckInModalProps, AgendaBoardProps, PositionedSession, SessionActions(), SessionActionsProps (+22 more)
 
 ### Community 21 - "SchedulingModal.tsx"
-Cohesion: 0.09
-Nodes (36): errMsg(), GroupOption, inputCls, Mode, primaryBtnCls, RoomOption, SchedulingModal(), SchedulingModalProps (+28 more)
+Cohesion: 0.10
+Nodes (36): errMsg(), GroupOption, inputCls, Mode, primaryBtnCls, RoomOption, SchedulingModal(), TeacherOption (+28 more)
 
-### Community 22 - "SessionMenu.tsx"
-Cohesion: 0.07
-Nodes (39): react-dom, DayPicker(), DayPickerProps, sizeStyles, todayISO(), toISO(), WEEKDAYS, Select (+31 more)
+### Community 22 - "BillingConfig.tsx"
+Cohesion: 0.10
+Nodes (28): Input, InputProps, BillingPage(), FinancesModal(), LogModal(), BillingConfig(), BillingConfigProps, BillingPreset (+20 more)
 
 ### Community 23 - "jwt_required"
 Cohesion: 0.12
@@ -264,12 +268,12 @@ Cohesion: 0.06
 Nodes (47): export_data(), get_dashboard(), jwt_required, route, Vinta School OS — Analytics Blueprint /api/analytics — Dashboard stats, Revenue…, Export data as CSV. Supported datasets: students, billing, teacher_hours,…, Dashboard overview stats. Returns: total students, total teachers, total…, Time-series revenue data. Query params: months (default 6) (+39 more)
 
 ### Community 26 - "TeacherHoursLog"
-Cohesion: 0.15
-Nodes (12): Records when a teacher's hours are logged (per session)., TeacherHoursLog, export_chart_data(), export_teacher_hours(), Generate CSV for chart data based on chart type. Supports: income, enrollments,…, Generate CSV for teacher hours. Columns: Teacher, Session, Date, Hours, Subject, get_teacher_payout_dashboard(), get_teacher_summary() (+4 more)
+Cohesion: 0.22
+Nodes (8): Records when a teacher's hours are logged (per session)., TeacherHoursLog, export_chart_data(), export_teacher_hours(), Generate CSV for chart data based on chart type. Supports: income, enrollments,…, Generate CSV for teacher hours. Columns: Teacher, Session, Date, Hours, Subject, log_teacher_hours(), Log hours for a teacher's session.
 
-### Community 27 - "BillingConfig.tsx"
-Cohesion: 0.06
-Nodes (63): RosterEntry, SessionCheckInModal(), STATUS_CONFIG, StudentSearchResult, ClassBillingStat(), fetchBilling(), AppearanceProps, BillingConfig() (+55 more)
+### Community 27 - "SessionCheckInModal.tsx"
+Cohesion: 0.09
+Nodes (43): RosterEntry, SessionCheckInModal(), STATUS_CONFIG, StudentSearchResult, fetchBilling(), DangerConfirmModal(), VoidModal(), BILLING_RULE_DEFAULTS (+35 more)
 
 ### Community 28 - "routes/auth.py"
 Cohesion: 0.07
@@ -307,17 +311,17 @@ Nodes (17): auto_checkout_expired_sessions(), Check all in-progress sessions who
 Cohesion: 0.09
 Nodes (25): Attendance Blueprint (/api/attendance), Billing & Subscriptions Blueprint (/api/billing), Calendar & Sessions Blueprint (/api/sessions), Classes & Groups Blueprint (/api/classes), Students Blueprint (/api/students), Teachers Blueprint (/api/teachers), Session Attendance & Check-in/out Flow, Student Tuition & Credit/Time Billing Architecture (+17 more)
 
-### Community 37 - "api.ts"
-Cohesion: 0.06
-Nodes (35): PINInput, PINInputProps, PinStep(), PinStepProps, ApiError, ApiResponse, CREDENTIAL_CHECK_ENDPOINTS, SESSION_TOLERANT_401 (+27 more)
+### Community 37 - "constants.ts"
+Cohesion: 0.08
+Nodes (25): ACADEMY_ID_KEY, ACTIVITY_TYPES, API_BASE_URL, AvatarPreset, BREAKPOINTS, CHART_COLORS, DEFAULT_SESSION_DURATION, ENTITY_FILTER_PAGES (+17 more)
 
 ### Community 38 - "jwt_required"
-Cohesion: 0.07
-Nodes (42): Extensible palette entity for calendar subject colors., Subject, create_classroom(), create_schedule(), create_subject(), delete_class(), delete_classroom(), delete_schedule() (+34 more)
+Cohesion: 0.08
+Nodes (38): create_classroom(), create_subject(), delete_class(), delete_classroom(), delete_schedule(), delete_subject(), get_class(), _group_payload() (+30 more)
 
 ### Community 39 - "routes/teachers.py"
-Cohesion: 0.11
-Nodes (29): Junction table for teacher-subject many-to-many relationship., An instructor employed by the academy., Teacher, TeacherSubject, _clean_email(), _clean_status(), create_teacher(), delete_teacher() (+21 more)
+Cohesion: 0.09
+Nodes (35): Extensible palette entity for calendar subject colors., Subject, Junction table for teacher-subject many-to-many relationship., An instructor employed by the academy., Teacher, TeacherSubject, _clean_email(), _clean_status() (+27 more)
 
 ### Community 40 - "routes/classes.py"
 Cohesion: 0.13
@@ -327,53 +331,53 @@ Nodes (25): Vinta School OS — Classes Blueprint /api/classes, /api/classrooms 
 Cohesion: 0.10
 Nodes (34): CalendarPage(), hourLabel(), errMsg(), GroupOption, RoomOption, SessionWindowModal(), TeacherOption, calendarRequest() (+26 more)
 
-### Community 42 - "react"
-Cohesion: 0.12
-Nodes (19): react, StudentsPage, FinalizeSessionModal(), AddStudentModal(), AddStudentModalProps, ClassOption, inputClass, useStudentBilling() (+11 more)
+### Community 42 - "toast"
+Cohesion: 0.14
+Nodes (12): StudentsPage, AddStudentModal(), AddStudentModalProps, ClassOption, inputClass, activePillClass(), FilterKey, StatCard() (+4 more)
 
 ### Community 43 - "SessionDetail.tsx"
 Cohesion: 0.14
-Nodes (17): InfoChipProps, RosterStudent, SessionDetail, STATUS_BADGE_CLASSES, StudentRow(), StudentRowProps, SubscriptionChip(), FreeNextModal() (+9 more)
+Nodes (17): PinStep(), PinStepProps, InfoChipProps, RosterStudent, SessionDetail, STATUS_BADGE_CLASSES, StudentRow(), StudentRowProps (+9 more)
 
-### Community 44 - "dependencies"
-Cohesion: 0.17
-Nodes (12): dependencies, axios, clsx, lucide-react, react, react-dom, react-router-dom, recharts (+4 more)
+### Community 44 - "StudentDrawer.tsx"
+Cohesion: 0.21
+Nodes (11): MultiPayModalProps, BillingSummaryCardProps, useStudentBilling(), useStudentProfile(), UseStudentProfileResult, ENROLLMENT_LABELS, Field(), StudentDrawer() (+3 more)
 
 ### Community 45 - "Luxury School OS Concept"
 Cohesion: 0.11
 Nodes (19): Flask REST API Architecture, Auth Blueprint (/api/auth), Two-Stage Auth & Profile PIN Verification Flow, Docker Compose Local Environment, Flask & SQLAlchemy Dependencies, PIN-Attributed Activity Log & Audit Trail, Algerian Private Academy Target Market, Glassmorphic Design Tokens (--gold / --emerald) (+11 more)
 
 ### Community 46 - "formatters.ts"
-Cohesion: 0.14
-Nodes (17): MultiPayModalProps, BillingSummaryCardProps, STUDENT_STATUS_LABELS, safePhone(), StudentIdentity(), StudentIdentityProps, UseStudentProfileResult, StudentDrawerProps (+9 more)
+Cohesion: 0.18
+Nodes (8): ProfileCreator(), STATUS_LABELS, statusLabel(), StudentTable(), StudentTableProps, formatPhone(), getInitials(), StudentStatus
 
 ### Community 47 - "PaymentHistoryList.tsx"
-Cohesion: 0.29
-Nodes (10): humaniseStatus(), METHOD_LABELS, methodLabel(), parseTimestamp(), PaymentHistoryList(), PaymentHistoryListProps, purchaseShape(), statusPillClasses() (+2 more)
+Cohesion: 0.38
+Nodes (9): formatDateRange(), formatDisplayDate(), humaniseStatus(), METHOD_LABELS, methodLabel(), parseTimestamp(), PaymentHistoryList(), purchaseShape() (+1 more)
 
 ### Community 48 - "log_activity"
 Cohesion: 0.22
 Nodes (10): _apply_group_fields(), create_class(), _normalize_billing_model(), Create a new class. Body: { name, subject?, color?, teacher_id?, capacity?,…, Update class fields (legacy + CourseGroup money-model fields)., Map friendly billing-model names to the DB enum values., Apply any CourseGroup fields present in data. Returns applied names., update_class() (+2 more)
 
 ### Community 49 - "ClassesPage.tsx"
-Cohesion: 0.08
-Nodes (38): ClassCardMenuProps, ClassDetail(), ClassDetailProps, COLOR_PRESETS, DAY_LABELS, DAY_SHORT, EnrolledStudent, getScheduleBounds() (+30 more)
+Cohesion: 0.06
+Nodes (49): DayPicker(), DayPickerProps, sizeStyles, todayISO(), toISO(), WEEKDAYS, PinConfirmDialog(), PinConfirmDialogProps (+41 more)
 
 ### Community 50 - "ActivityLog.tsx"
 Cohesion: 0.18
 Nodes (10): ActivityLog, ActivityLogEntry, ActivityLogProps, ActivityRow(), ActivityRowProps, ICON_MAP, ICON_STYLE, relativeTime() (+2 more)
 
-### Community 51 - "ProfileCard.tsx"
-Cohesion: 0.31
-Nodes (7): EmptyLine(), InlineSpinner(), ProfileCard(), ProfileCardProps, StudentClasses(), StudentClassesProps, Enrollment
+### Community 51 - "student.ts"
+Cohesion: 0.14
+Nodes (17): EmptyLine(), ProfileCard(), ProfileCardProps, StudentClasses(), StudentClassesProps, GuardianRow, safePhone(), StudentGuardians() (+9 more)
 
-### Community 52 - "lucide-react"
-Cohesion: 0.05
-Nodes (53): lucide-react, react-router-dom, App(), Providers(), ProvidersProps, TOAST_COLORS, TOAST_ICONS, ToastContainer() (+45 more)
+### Community 52 - "router.tsx"
+Cohesion: 0.06
+Nodes (43): react-router-dom, AppShell(), AuthGuard(), AuthScreen, BillingPage, CalendarPage, ClassesPage, DashboardPage (+35 more)
 
-### Community 53 - "Session"
-Cohesion: 0.10
-Nodes (22): AddSubjectModal(), AddSubjectModalProps, COLOR_PRESETS, DayViewProps, FinalizeSessionModalProps, SessionCheckInModalProps, SubjectPalette(), SubjectPaletteProps (+14 more)
+### Community 53 - "cn"
+Cohesion: 0.09
+Nodes (25): react-dom, PageContainer(), PageContainerProps, CardFooter, ConfirmDialog, ConfirmDialogProps, Drawer, DrawerProps (+17 more)
 
 ### Community 54 - "compilerOptions"
 Cohesion: 0.12
@@ -384,40 +388,56 @@ Cohesion: 0.06
 Nodes (20): unit, Should return 0 for future due dates., Should return 0 when due date is today., Test payment plan creation and properties., Payment plans should store correct values., Term plans should have 90-day duration., Test billing status derivation logic., Status should be 'paid' when paid_date is set and paid_amount >= amount_da. (+12 more)
 
 ### Community 56 - "class.ts"
-Cohesion: 0.13
-Nodes (14): AttendanceStatus, CheckInRequest, ClassBillingInfo, Classroom, ClassState, ClassStats, CreateClassRequest, CreateClassroomRequest (+6 more)
+Cohesion: 0.12
+Nodes (15): AttendanceStatus, CheckInRequest, ClassBillingInfo, Classroom, ClassState, ClassStats, CreateClassRequest, CreateClassroomRequest (+7 more)
 
 ### Community 57 - "add_lifecycle_columns.py"
 Cohesion: 0.16
 Nodes (11): main(), Additive migration — billing relations, session lifecycle, billing toggles.…, Resolve the SQLite file the app actually opens, from DATABASE_URL., resolve_db_path(), One-shot database fix — adds any missing columns to existing tables. Run once:…, main(), Schema step — activity_logs.user_id becomes nullable. WHY The audit trail has…, Resolve the SQLite file the app actually opens, from DATABASE_URL. (+3 more)
 
-### Community 58 - "devDependencies"
-Cohesion: 0.25
-Nodes (8): devDependencies, oxlint, @types/node, @types/react, @types/react-dom, typescript, vite, @vitejs/plugin-react
+### Community 58 - "SessionMenu.tsx"
+Cohesion: 0.15
+Nodes (17): dangerBtnCls, FreeNextModal(), inputCls, LogEntry, MenuItem(), ModalKind, ModalShell(), PayoutRow (+9 more)
 
-### Community 59 - "vite.config.ts"
-Cohesion: 0.33
-Nodes (4): ref_path, @tailwindcss/vite, vite, @vitejs/plugin-react
+### Community 59 - "check_overdue_billings"
+Cohesion: 0.50
+Nodes (4): check_overdue_billings(), Check for billings that are past due_date and mark them as overdue. Returns…, check_overdue_payments(), Check all academies for billings past their due_date. Marks them as 'overdue'…
 
-### Community 60 - "scripts"
-Cohesion: 0.40
-Nodes (5): scripts, build, dev, lint, preview
+### Community 60 - "providers.tsx"
+Cohesion: 0.13
+Nodes (12): App(), Providers(), ProvidersProps, TOAST_COLORS, TOAST_ICONS, ToastContainer(), AppRouter(), Toast (+4 more)
+
+### Community 61 - "uiStore.ts"
+Cohesion: 0.09
+Nodes (26): AppShell(), classMatches(), classRow(), GlobalSearch(), Row, ROW_STYLE, SECTION_ORDER, STUDENT_STATUS_LABEL (+18 more)
 
 ### Community 62 - "StudentAttendanceCalendar.tsx"
-Cohesion: 0.21
-Nodes (12): dominantState(), formatTime(), monthCells(), STATE_PRIORITY, STATE_STYLES, StateStyle, StudentAttendanceCalendar(), StudentAttendanceCalendarProps (+4 more)
+Cohesion: 0.23
+Nodes (11): dominantState(), formatTime(), monthCells(), STATE_PRIORITY, STATE_STYLES, StateStyle, StudentAttendanceCalendar(), StudentAttendanceCalendarProps (+3 more)
 
 ### Community 63 - "create_app"
 Cohesion: 0.05
 Nodes (29): BaseConfig, DevelopmentConfig, ProductionConfig, Vinta School OS — Configuration Environments Dev, Test, and Production…, Shared configuration across all environments., Development environment configuration., Test environment configuration., Production environment configuration. (+21 more)
 
+### Community 64 - "TestCheckInFlow"
+Cohesion: 0.33
+Nodes (4): Test student check-in to session., Staff should be able to check in a student to a session., Check-in should create an activity log entry., TestCheckInFlow
+
 ### Community 65 - "test_cancel_session.py"
 Cohesion: 0.16
 Nodes (21): cancel_session(), Cancel a session, recording *why*. The reason is not decoration:…, Vinta School OS — cancelling a session. ``cancel_session`` is reached from…, CANCEL_REASONS is a plain Python tuple; the column is a native enum that knows…, An unrecognised reason is a label problem, not a reason to lose the cancel., A bare DELETE still cancels; it just does not claim to know why., Tenant scoping — the lookup is by id AND academy., A class that has not run can be called off; a class that is running can be… (+13 more)
 
-### Community 67 - "PayoutRecord"
-Cohesion: 0.09
-Nodes (20): PayoutRecord, Immutable revenue fact per conducted session allocation (DZD integers)., Teacher payout computed from gross revenue per conducted session., RevenueEntry, _compute_teacher_cut(), finalize_session(), get_revenue(), list_payouts() (+12 more)
+### Community 66 - "calendar.ts"
+Cohesion: 0.14
+Nodes (14): AddSubjectModal(), AddSubjectModalProps, COLOR_PRESETS, SubjectPalette(), SubjectPaletteProps, WeekViewProps, CalendarState, CalendarViewMode (+6 more)
+
+### Community 67 - "billing_service.py"
+Cohesion: 0.04
+Nodes (72): PaymentPlan, PayoutRecord, Student purchase of a Class offer (credit-based or time-based). Table name is…, Reusable billing plans that can be assigned to students., Immutable revenue fact per conducted session allocation (DZD integers)., Teacher payout computed from gross revenue per conducted session., RevenueEntry, StudentSubscription (+64 more)
+
+### Community 68 - "SessionBlock.tsx"
+Cohesion: 0.53
+Nodes (5): hexToRgba(), SessionBlock(), SessionBlockProps, formatTime(), CalendarSession
 
 ### Community 69 - "TestHourlyPayroll"
 Cohesion: 0.12
@@ -427,49 +447,41 @@ Nodes (12): unit, Settling a payroll should set paid_date and status., Test hour
 Cohesion: 0.17
 Nodes (15): CreateSessionRequestSchema, CreateSessionResponseSchema, DaySessionsResponseSchema, Schema, Calendar schemas — Session CRUD, Week/Day views, Drag-and-drop., PATCH /api/sessions/<id>, Single session in calendar view., GET /api/calendar/week response. (+7 more)
 
-### Community 73 - "scheduling_service.py"
-Cohesion: 0.13
-Nodes (23): create_session(), generate_sessions_from_schedule(), get_class_sessions(), get_day_sessions(), get_week_sessions(), _parse_time(), date, Vinta School OS — Scheduling Service Recurring slot generation, drag-to-… (+15 more)
+### Community 73 - "Class"
+Cohesion: 0.09
+Nodes (32): Class, A subject offering (e.g., 'Math — CM2'). Enrollment target for students., Recurring weekly slot defining when a class meets., Schedule, create_schedule(), Add a schedule block to a class. Body: { day_of_week, start_time, end_time,…, create_session(), generate_sessions_from_schedule() (+24 more)
 
 ### Community 77 - "Avatar.tsx"
 Cohesion: 0.33
 Nodes (8): Avatar, AvatarProps, getGradientForName(), getInitials(), gradientPairs, hashCode(), sizeConfig, squircleRadius()
 
-### Community 81 - "test_attendance_flow.py"
-Cohesion: 0.25
-Nodes (5): Integration Tests — Attendance Flow Tests for check-in/out, PIN attribution,…, Test student check-in to session., Staff should be able to check in a student to a session., Check-in should create an activity log entry., TestCheckInFlow
-
 ### Community 83 - ".oxlintrc.json"
 Cohesion: 0.33
 Nodes (5): plugins, rules, react/only-export-components, react/rules-of-hooks, $schema
 
-### Community 84 - "uiStore.ts"
-Cohesion: 0.09
-Nodes (26): AppShell(), classMatches(), classRow(), GlobalSearch(), Row, ROW_STYLE, SECTION_ORDER, STUDENT_STATUS_LABEL (+18 more)
+### Community 84 - "TeacherDrawer.tsx"
+Cohesion: 0.06
+Nodes (44): RFC-5322, TeachersPage, ClassBillingStat(), AddTeacherModal(), AddTeacherModalProps, COMMISSION_PLACEHOLDER, COMMISSION_SUFFIX, COMMISSION_TYPES (+36 more)
 
 ### Community 86 - "BillingSummaryCard.tsx"
-Cohesion: 0.20
-Nodes (17): BillingCalendarCard(), BillingCalendarCardProps, CYCLE_STATUS_LABELS, statusDot(), BillingSummaryCard(), DASH, formatDateRange(), formatDisplayDate() (+9 more)
+Cohesion: 0.21
+Nodes (17): BillingCalendarCard(), BillingCalendarCardProps, CYCLE_STATUS_LABELS, statusDot(), BillingSummaryCard(), DASH, knownText(), parseISODate() (+9 more)
 
-### Community 87 - "audit_service.py"
-Cohesion: 0.22
-Nodes (9): get_activity_logs(), get_log_count(), log_action(), _map_log_type(), Vinta School OS — Audit Service Staff PIN attribution logger, activity log…, Get total activity log count for an academy., Create an attributed activity log entry. Every action is attributed to the…, Get activity logs for an academy, newest first. UI shows last 30 entries with… (+1 more)
-
-### Community 117 - "student.ts"
-Cohesion: 0.16
-Nodes (14): ProfileCreator(), GuardianRow, safePhone(), StudentGuardians(), StudentGuardiansProps, formatPhone(), AttendanceCalendar, CreateGuardianRequest (+6 more)
+### Community 87 - "get_activity_logs"
+Cohesion: 0.50
+Nodes (4): get_activity_logs(), _map_log_type(), Get activity logs for an academy, newest first. UI shows last 30 entries with…, Map entity_type + action to UI log type for icon/color styling: - payment →…
 
 ### Community 118 - "conftest.py"
-Cohesion: 0.06
-Nodes (42): PaymentPlan, Reusable billing plans that can be assigned to students., Classroom, A physical room in the academy., Recurring weekly slot defining when a class meets., Schedule, Guardian, Student guardian / emergency contact. One student can have multiple guardians. (+34 more)
+Cohesion: 0.10
+Nodes (26): Classroom, A physical room in the academy., Guardian, Student guardian / emergency contact. One student can have multiple guardians., app(), auth_headers_owner(), auth_headers_staff(), classroom() (+18 more)
 
 ### Community 119 - "routes/notifications.py"
 Cohesion: 0.21
 Nodes (15): Notification, In-app toast notification / alert., create_notification(), get_unread_count(), list_notifications(), mark_all_read(), mark_read(), jwt_required (+7 more)
 
 ### Community 121 - "themeStore.ts"
-Cohesion: 0.16
-Nodes (18): zustand, FONT_SIZE_KEY, LANGUAGE_KEY, THEME_KEY, applyFontSize(), applyLanguage(), applyTheme(), FontSize (+10 more)
+Cohesion: 0.17
+Nodes (17): FONT_SIZE_KEY, LANGUAGE_KEY, THEME_KEY, applyFontSize(), applyLanguage(), applyTheme(), FontSize, Language (+9 more)
 
 ### Community 124 - "marshmallow"
 Cohesion: 0.29
@@ -477,18 +489,18 @@ Nodes (7): DashboardResponseSchema, Schema, Analytics schemas — Dashboard stat
 
 ## Knowledge Gaps
 - **384 isolated node(s):** `type`, `Meta`, `$schema`, `plugins`, `react/rules-of-hooks` (+379 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1137 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **30 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1135 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **37 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `tenant_required()` connect `tenant_required` to `routes/students.py`, `jwt_required`, `routes/teachers.py`, `routes/classes.py`, `User`, `owner_only`, `log_activity`, `AcademySettings`, `routes/notifications.py`, `conftest.py`, `jwt_required`, `routes/settings.py`, `routes/calendar.py`?**
+- **Why does `tenant_required()` connect `tenant_required` to `routes/students.py`, `billing_service.py`, `jwt_required`, `routes/teachers.py`, `routes/classes.py`, `Class`, `User`, `owner_only`, `log_activity`, `AcademySettings`, `routes/notifications.py`, `jwt_required`, `routes/settings.py`, `routes/calendar.py`?**
   _High betweenness centrality (0.051) - this node is a cross-community bridge._
-- **Why does `Session` connect `Session` to `extensions.py`, `test_cancel_session.py`, `TestSessionCRUD`, `PayoutRecord`, `test_cron_jobs.py`, `jwt_required`, `routes/teachers.py`, `routes/classes.py`, `scheduling_service.py`, `owner_only`, `Class`, `billing_service.py`, `conftest.py`, `jwt_required`, `routes/settings.py`, `routes/calendar.py`, `TeacherHoursLog`?**
+- **Why does `Session` connect `Session` to `extensions.py`, `test_cancel_session.py`, `TestSessionCRUD`, `billing_service.py`, `test_cron_jobs.py`, `jwt_required`, `routes/teachers.py`, `routes/classes.py`, `Class`, `owner_only`, `Student`, `conftest.py`, `jwt_required`, `routes/settings.py`, `routes/calendar.py`?**
   _High betweenness centrality (0.038) - this node is a cross-community bridge._
-- **Why does `cn()` connect `cn` to `TeacherDrawer.tsx`, `AgendaBoard.tsx`, `ClassQuickCreate.tsx`, `BillingPage.tsx`, `sessionLifecycle.ts`, `SchedulingModal.tsx`, `SessionMenu.tsx`, `BillingConfig.tsx`, `api.ts`, `DashboardPage.tsx`, `react`, `SessionDetail.tsx`, `formatters.ts`, `PaymentHistoryList.tsx`, `ClassesPage.tsx`, `ActivityLog.tsx`, `ProfileCard.tsx`, `lucide-react`, `Session`, `StudentAttendanceCalendar.tsx`, `Avatar.tsx`, `uiStore.ts`, `BillingSummaryCard.tsx`, `student.ts`?**
-  _High betweenness centrality (0.029) - this node is a cross-community bridge._
+- **Why does `cn()` connect `cn` to `SettingsPage.tsx`, `ClassCardMenu.tsx`, `WeekView.tsx`, `SessionWindowModal.tsx`, `react`, `Session`, `SchedulingModal.tsx`, `BillingConfig.tsx`, `SessionCheckInModal.tsx`, `DashboardPage.tsx`, `toast`, `SessionDetail.tsx`, `StudentDrawer.tsx`, `formatters.ts`, `PaymentHistoryList.tsx`, `ClassesPage.tsx`, `ActivityLog.tsx`, `student.ts`, `router.tsx`, `SessionMenu.tsx`, `providers.tsx`, `uiStore.ts`, `StudentAttendanceCalendar.tsx`, `calendar.ts`, `SessionBlock.tsx`, `Avatar.tsx`, `TeacherDrawer.tsx`, `BillingSummaryCard.tsx`?**
+  _High betweenness centrality (0.031) - this node is a cross-community bridge._
 - **Are the 3 inferred relationships involving `tenant_required()` (e.g. with `Academy` and `User`) actually correct?**
   _`tenant_required()` has 3 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 40 inferred relationships involving `Session` (e.g. with `get_dashboard()` and `get_roster()`) actually correct?**
@@ -496,4 +508,4 @@ _Questions this graph is uniquely positioned to answer:_
 - **What connects `type`, `Meta`, `$schema` to the rest of the system?**
   _384 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `extensions.py` be split into smaller, more focused modules?**
-  _Cohesion score 0.05878332194121668 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.04245439469320066 - nodes in this community are weakly interconnected._

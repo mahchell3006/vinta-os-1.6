@@ -1,0 +1,785 @@
+[
+  {
+    "first_name": "Amine",
+    "last_name": "Benali",
+    "phone": null,
+    "parent_phone": "05 51 23 45 67",
+    "guardian_name": "Fatiha Benali",
+    "guardian_relationship": "Mother",
+    "notes": null
+  },
+  {
+    "first_name": "Lyna",
+    "last_name": "Bouzid",
+    "phone": null,
+    "parent_phone": "06 62 14 57 89",
+    "guardian_name": "Karim Bouzid",
+    "guardian_relationship": "Father",
+    "notes": null
+  },
+  {
+    "first_name": "Yacine",
+    "last_name": "Haddad",
+    "phone": null,
+    "parent_phone": "07 74 51 28 93",
+    "guardian_name": "Nadia Haddad",
+    "guardian_relationship": "Mother",
+    "notes": "Asthme léger — inhalateur à l'école"
+  },
+  {
+    "first_name": "Rania",
+    "last_name": "Cherif",
+    "phone": "06 64 17 82 35",
+    "parent_phone": "05 58 92 36 74",
+    "guardian_name": "Mohamed Cherif",
+    "guardian_relationship": "Father",
+    "notes": null
+  },
+  {
+    "first_name": "Sofiane",
+    "last_name": "Meziane",
+    "phone": null,
+    "parent_phone": "06 66 71 23 48",
+    "guardian_name": "Djamila Meziane",
+    "guardian_relationship": "Mother",
+    "notes": null
+  },
+  {
+    "first_name": "Meriem",
+    "last_name": "Zerrouki",
+    "phone": null,
+    "parent_phone": "05 53 47 81 25",
+    "guardian_name": "Rachid Zerrouki",
+    "guardian_relationship": "Father",
+    "notes": "Allergie aux arachides"
+  },
+  {
+    "first_name": "Ilyes",
+    "last_name": "Belkacem",
+    "phone": "06 67 81 23 49",
+    "parent_phone": "07 71 25 67 82",
+    "guardian_name": "Salima Belkacem",
+    "guardian_relationship": "Mother",
+    "notes": null
+  },
+  {
+    "first_name": "Nour",
+    "last_name": "Ait Ali",
+    "phone": null,
+    "parent_phone": "05 57 83 41 29",
+    "guardian_name": "Hocine Ait Ali",
+    "guardian_relationship": "Father",
+    "notes": null
+  },
+  {
+    "first_name": "Abdelkader",
+    "last_name": "Boudiaf",
+    "phone": null,
+    "parent_phone": "06 64 58 92 31",
+    "guardian_name": "Yamina Boudiaf",
+    "guardian_relationship": "Mother",
+    "notes": "Suivi orthophoniste"
+  },
+  {
+    "first_name": "Yasmine",
+    "last_name": "Hamdi",
+    "phone": "07 76 72 34 51",
+    "parent_phone": "05 52 36 74 58",
+    "guardian_name": "Farid Hamdi",
+    "guardian_relationship": "Father",
+    "notes": null
+  },
+  {
+    "first_name": "Anis",
+    "last_name": "Saidi",
+    "phone": null,
+    "parent_phone": "07 79 01 24 56",
+    "guardian_name": "Nabila Saidi",
+    "guardian_relationship": "Mother",
+    "notes": null
+  },
+  {
+    "first_name": "Chahinez",
+    "last_name": "Brahimi",
+    "phone": null,
+    "parent_phone": "06 61 27 83 45",
+    "guardian_name": "Ali Brahimi",
+    "guardian_relationship": "Father",
+    "notes": "Allergie au lactose"
+  },
+  {
+    "first_name": "Bilal",
+    "last_name": "Khelifi",
+    "phone": "05 53 45 67 89",
+    "parent_phone": "05 55 63 41 27",
+    "guardian_name": "Mourad Khelifi",
+    "guardian_relationship": "Uncle",
+    "notes": null
+  },
+  {
+    "first_name": "Hadjer",
+    "last_name": "Amrani",
+    "phone": null,
+    "parent_phone": "07 73 49 06 71",
+    "guardian_name": "Souad Amrani",
+    "guardian_relationship": "Mother",
+    "notes": null
+  },
+  {
+    "first_name": "Zakaria",
+    "last_name": "Ferhat",
+    "phone": null,
+    "parent_phone": "06 67 81 25 63",
+    "guardian_name": "Kamel Ferhat",
+    "guardian_relationship": "Father",
+    "notes": "Difficultés en mathématiques — soutien scolaire"
+  },
+  {
+    "first_name": "Lina",
+    "last_name": "Bensalem",
+    "phone": null,
+    "parent_phone": "05 54 56 78 91",
+    "guardian_name": "Amina Bensalem",
+    "guardian_relationship": "Mother",
+    "notes": null
+  },
+  {
+    "first_name": "Mohamed",
+    "last_name": "Ouali",
+    "phone": null,
+    "parent_phone": "06 68 94 51 26",
+    "guardian_name": "Tayeb Ouali",
+    "guardian_relationship": "Father",
+    "notes": null
+  },
+  {
+    "first_name": "Kenza",
+    "last_name": "Zidane",
+    "phone": "06 61 25 68 93",
+    "parent_phone": "07 72 35 68 93",
+    "guardian_name": "Leila Zidane",
+    "guardian_relationship": "Mother",
+    "notes": "Port de lunettes"
+  },
+  {
+    "first_name": "Ayoub",
+    "last_name": "Mansouri",
+    "phone": null,
+    "parent_phone": "05 56 78 92 34",
+    "guardian_name": "Djamel Mansouri",
+    "guardian_relationship": "Father",
+    "notes": null
+  },
+  {
+    "first_name": "Sara",
+    "last_name": "Benyoucef",
+    "phone": "05 59 03 41 26",
+    "parent_phone": "06 63 41 27 89",
+    "guardian_name": "Malika Benyoucef",
+    "guardian_relationship": "Mother",
+    "notes": null
+  },
+  {
+    "first_name": "Ramzi",
+    "last_name": "Larbi",
+    "phone": null,
+    "parent_phone": "07 77 84 52 35",
+    "guardian_name": "Abdelkrim Larbi",
+    "guardian_relationship": "Father",
+    "notes": "Transport scolaire assuré"
+  },
+  {
+    "first_name": "Amina",
+    "last_name": "Slimani",
+    "phone": "07 74 56 71 28",
+    "parent_phone": "05 51 28 96 73",
+    "guardian_name": "Zahia Slimani",
+    "guardian_relationship": "Grandmother",
+    "notes": null
+  },
+  {
+    "first_name": "Walid",
+    "last_name": "Toumi",
+    "phone": null,
+    "parent_phone": "06 65 67 83 41",
+    "guardian_name": "Said Toumi",
+    "guardian_relationship": "Father",
+    "notes": null
+  },
+  {
+    "first_name": "Hiba",
+    "last_name": "Bouziane",
+    "phone": "06 68 91 24 56",
+    "parent_phone": "07 78 91 25 62",
+    "guardian_name": "Ourida Bouziane",
+    "guardian_relationship": "Mother",
+    "notes": "Allergie aux fruits de mer"
+  },
+  {
+    "first_name": "Fares",
+    "last_name": "Ghezali",
+    "phone": null,
+    "parent_phone": "05 52 34 58 96",
+    "guardian_name": "Rachid Ghezali",
+    "guardian_relationship": "Father",
+    "notes": null
+  },
+  {
+    "first_name": "Asma",
+    "last_name": "Rahmani",
+    "phone": "05 52 37 89 03",
+    "parent_phone": "06 66 73 41 27",
+    "guardian_name": "Dalila Rahmani",
+    "guardian_relationship": "Mother",
+    "notes": null
+  },
+  {
+    "first_name": "Adam",
+    "last_name": "Belhadj",
+    "phone": null,
+    "parent_phone": "07 74 57 82 39",
+    "guardian_name": "Nordine Belhadj",
+    "guardian_relationship": "Father",
+    "notes": "Très bon niveau en français"
+  },
+  {
+    "first_name": "Ines",
+    "last_name": "Merabet",
+    "phone": "07 71 23 46 74",
+    "parent_phone": "05 57 81 24 52",
+    "guardian_name": "Zohra Merabet",
+    "guardian_relationship": "Mother",
+    "notes": null
+  },
+  {
+    "first_name": "Oussama",
+    "last_name": "Kaci",
+    "phone": null,
+    "parent_phone": "06 62 38 95 63",
+    "guardian_name": "Saida Kaci",
+    "guardian_relationship": "Mother",
+    "notes": null
+  },
+  {
+    "first_name": "Selma",
+    "last_name": "Benhamou",
+    "phone": "06 66 78 91 25",
+    "parent_phone": "07 73 45 61 28",
+    "guardian_name": "Mustapha Benhamou",
+    "guardian_relationship": "Father",
+    "notes": "Suivi orthodontique"
+  },
+  {
+    "first_name": "Hicham",
+    "last_name": "Djebbar",
+    "phone": null,
+    "parent_phone": "05 59 06 73 41",
+    "guardian_name": "Nacera Djebbar",
+    "guardian_relationship": "Mother",
+    "notes": null
+  },
+  {
+    "first_name": "Nourhane",
+    "last_name": "Guerrouj",
+    "phone": "05 54 51 27 82",
+    "parent_phone": "06 61 24 58 95",
+    "guardian_name": "Abderrahmane Guerrouj",
+    "guardian_relationship": "Father",
+    "notes": null
+  },
+  {
+    "first_name": "Mehdi",
+    "last_name": "Hadjadj",
+    "phone": null,
+    "parent_phone": "07 75 62 37 84",
+    "guardian_name": "Fatima Hadjadj",
+    "guardian_relationship": "Grandmother",
+    "notes": "Père en déplacement fréquent à l'étranger"
+  },
+  {
+    "first_name": "Aya",
+    "last_name": "Ikhlef",
+    "phone": "07 73 46 79 01",
+    "parent_phone": "05 53 41 29 06",
+    "guardian_name": "Hakim Ikhlef",
+    "guardian_relationship": "Father",
+    "notes": null
+  },
+  {
+    "first_name": "Tarek",
+    "last_name": "Kessai",
+    "phone": null,
+    "parent_phone": "06 68 97 84 52",
+    "guardian_name": "Souhila Kessai",
+    "guardian_relationship": "Mother",
+    "notes": null
+  },
+  {
+    "first_name": "Maria",
+    "last_name": "Lounis",
+    "phone": "06 61 24 56 78",
+    "parent_phone": "07 76 71 23 45",
+    "guardian_name": "Arezki Lounis",
+    "guardian_relationship": "Father",
+    "notes": "Pratique le judo"
+  },
+  {
+    "first_name": "Salim",
+    "last_name": "Madani",
+    "phone": null,
+    "parent_phone": "05 54 52 36 78",
+    "guardian_name": "Hamid Madani",
+    "guardian_relationship": "Father",
+    "notes": null
+  },
+  {
+    "first_name": "Rym",
+    "last_name": "Naceri",
+    "phone": "05 58 95 62 34",
+    "parent_phone": "06 67 89 01 23",
+    "guardian_name": "Lynda Naceri",
+    "guardian_relationship": "Mother",
+    "notes": null
+  },
+  {
+    "first_name": "Noureddine",
+    "last_name": "Rezig",
+    "phone": null,
+    "parent_phone": "07 71 23 45 68",
+    "guardian_name": "Kheira Rezig",
+    "guardian_relationship": "Mother",
+    "notes": "Allergie aux œufs"
+  },
+  {
+    "first_name": "Kawthar",
+    "last_name": "Sellami",
+    "phone": "07 76 71 28 93",
+    "parent_phone": "05 55 66 71 29",
+    "guardian_name": "Boualem Sellami",
+    "guardian_relationship": "Father",
+    "notes": null
+  },
+  {
+    "first_name": "Younes",
+    "last_name": "Tounsi",
+    "phone": null,
+    "parent_phone": "06 69 04 57 82",
+    "guardian_name": "Fethi Tounsi",
+    "guardian_relationship": "Uncle",
+    "notes": null
+  },
+  {
+    "first_name": "Imene",
+    "last_name": "Yahiaoui",
+    "phone": "06 62 34 57 89",
+    "parent_phone": "07 72 38 94 51",
+    "guardian_name": "Halima Yahiaoui",
+    "guardian_relationship": "Mother",
+    "notes": "Timide — encourager la participation orale"
+  },
+  {
+    "first_name": "Aymen",
+    "last_name": "Zaidi",
+    "phone": null,
+    "parent_phone": "05 56 73 41 27",
+    "guardian_name": "Slimane Zaidi",
+    "guardian_relationship": "Father",
+    "notes": null
+  },
+  {
+    "first_name": "Manel",
+    "last_name": "Chaoui",
+    "phone": "05 57 89 01 23",
+    "parent_phone": "06 64 55 68 92",
+    "guardian_name": "Naïma Chaoui",
+    "guardian_relationship": "Aunt",
+    "notes": null
+  },
+  {
+    "first_name": "Reda",
+    "last_name": "Derbal",
+    "phone": null,
+    "parent_phone": "07 77 81 26 73",
+    "guardian_name": "Ammar Derbal",
+    "guardian_relationship": "Father",
+    "notes": "Boursier — dossier validé"
+  },
+  {
+    "first_name": "Chaima",
+    "last_name": "Hamidou",
+    "phone": "07 74 52 35 67",
+    "parent_phone": "05 51 22 34 59",
+    "guardian_name": "Samira Hamidou",
+    "guardian_relationship": "Mother",
+    "notes": null
+  },
+  {
+    "first_name": "Djamel",
+    "last_name": "Boudjema",
+    "phone": null,
+    "parent_phone": "06 63 46 78 91",
+    "guardian_name": "Rabah Boudjema",
+    "guardian_relationship": "Grandfather",
+    "notes": null
+  },
+  {
+    "first_name": "Warda",
+    "last_name": "Mihoubi",
+    "phone": "06 61 26 73 48",
+    "parent_phone": "07 78 94 52 35",
+    "guardian_name": "Kahina Mihoubi",
+    "guardian_relationship": "Mother",
+    "notes": "Régime sans gluten"
+  },
+  {
+    "first_name": "Brahim",
+    "last_name": "Berbache",
+    "phone": null,
+    "parent_phone": "05 52 37 81 26",
+    "guardian_name": "Omar Berbache",
+    "guardian_relationship": "Father",
+    "notes": null
+  },
+  {
+    "first_name": "Faiza",
+    "last_name": "Ait Idir",
+    "phone": "05 53 48 94 51",
+    "parent_phone": "06 65 61 23 48",
+    "guardian_name": "Saadia Ait Idir",
+    "guardian_relationship": "Mother",
+    "notes": null
+  },
+  {
+    "first_name": "Tahar",
+    "last_name": "Belkacemi",
+    "phone": null,
+    "parent_phone": "07 74 58 96 72",
+    "guardian_name": "Youcef Belkacemi",
+    "guardian_relationship": "Father",
+    "notes": "Suivi psychologique en cours"
+  },
+  {
+    "first_name": "Souad",
+    "last_name": "Gharbi",
+    "phone": "07 75 61 27 86",
+    "parent_phone": "05 59 01 27 83",
+    "guardian_name": "Hadda Gharbi",
+    "guardian_relationship": "Grandmother",
+    "notes": null
+  },
+  {
+    "first_name": "Hocine",
+    "last_name": "Henni",
+    "phone": null,
+    "parent_phone": "06 66 74 52 38",
+    "guardian_name": "Lakhdar Henni",
+    "guardian_relationship": "Father",
+    "notes": null
+  },
+  {
+    "first_name": "Nadia",
+    "last_name": "Kaddour",
+    "phone": "06 69 02 34 55",
+    "parent_phone": "07 73 48 95 61",
+    "guardian_name": "Messaoud Kaddour",
+    "guardian_relationship": "Father",
+    "notes": "Adore la lecture"
+  },
+  {
+    "first_name": "Mouloud",
+    "last_name": "Lazreg",
+    "phone": null,
+    "parent_phone": "05 51 26 74 58",
+    "guardian_name": "Tassadit Lazreg",
+    "guardian_relationship": "Mother",
+    "notes": null
+  },
+  {
+    "first_name": "Hanane",
+    "last_name": "Mokrani",
+    "phone": "05 56 74 51 29",
+    "parent_phone": "06 67 82 31 24",
+    "guardian_name": "Rabeh Mokrani",
+    "guardian_relationship": "Father",
+    "notes": null
+  },
+  {
+    "first_name": "Rabah",
+    "last_name": "Nouri",
+    "phone": null,
+    "parent_phone": "07 75 69 03 46",
+    "guardian_name": "Zoubir Nouri",
+    "guardian_relationship": "Uncle",
+    "notes": "Vit avec son oncle à Alger"
+  },
+  {
+    "first_name": "Bouchra",
+    "last_name": "Oukaci",
+    "phone": "07 71 27 83 45",
+    "parent_phone": "05 54 51 28 92",
+    "guardian_name": "Mohand Oukaci",
+    "guardian_relationship": "Father",
+    "notes": null
+  },
+  {
+    "first_name": "Salah",
+    "last_name": "Rahmoune",
+    "phone": null,
+    "parent_phone": "06 62 37 86 74",
+    "guardian_name": "Soria Rahmoune",
+    "guardian_relationship": "Mother",
+    "notes": null
+  },
+  {
+    "first_name": "Soumaya",
+    "last_name": "Saadi",
+    "phone": "06 64 55 68 92",
+    "parent_phone": "07 78 93 41 25",
+    "guardian_name": "Abdelmadjid Saadi",
+    "guardian_relationship": "Father",
+    "notes": "Difficultés de concentration en classe"
+  },
+  {
+    "first_name": "Kamel",
+    "last_name": "Talbi",
+    "phone": null,
+    "parent_phone": "05 56 75 62 39",
+    "guardian_name": "Badia Talbi",
+    "guardian_relationship": "Aunt",
+    "notes": null
+  },
+  {
+    "first_name": "Zineb",
+    "last_name": "Ziani",
+    "phone": "05 58 91 26 73",
+    "parent_phone": "06 61 28 94 53",
+    "guardian_name": "Aomar Ziani",
+    "guardian_relationship": "Grandfather",
+    "notes": null
+  },
+  {
+    "first_name": "Farid",
+    "last_name": "Bouchema",
+    "phone": null,
+    "parent_phone": "07 74 52 37 81",
+    "guardian_name": "Louiza Bouchema",
+    "guardian_relationship": "Mother",
+    "notes": "Allergie aux piqûres d'abeille"
+  },
+  {
+    "first_name": "Malak",
+    "last_name": "Chikhi",
+    "phone": "07 72 33 45 61",
+    "parent_phone": "05 53 46 78 94",
+    "guardian_name": "Yacine Chikhi",
+    "guardian_relationship": "Father",
+    "notes": null
+  },
+  {
+    "first_name": "Mounir",
+    "last_name": "Doukali",
+    "phone": null,
+    "parent_phone": "06 69 01 25 67",
+    "guardian_name": "Redouane Doukali",
+    "guardian_relationship": "Father",
+    "notes": null
+  },
+  {
+    "first_name": "Yousra",
+    "last_name": "Fekhar",
+    "phone": "06 67 84 51 28",
+    "parent_phone": "07 72 34 51 28",
+    "guardian_name": "Karima Fekhar",
+    "guardian_relationship": "Mother",
+    "notes": "Excellent en dessin et arts plastiques"
+  },
+  {
+    "first_name": "Azzedine",
+    "last_name": "Gueddouche",
+    "phone": null,
+    "parent_phone": "05 55 67 83 42",
+    "guardian_name": "Lounis Gueddouche",
+    "guardian_relationship": "Father",
+    "notes": null
+  },
+  {
+    "first_name": "Thiziri",
+    "last_name": "Hakem",
+    "phone": "05 51 26 79 04",
+    "parent_phone": "06 61 23 46 79",
+    "guardian_name": "Idir Hakem",
+    "guardian_relationship": "Father",
+    "notes": null
+  },
+  {
+    "first_name": "Habib",
+    "last_name": "Izem",
+    "phone": null,
+    "parent_phone": "07 76 78 91 24",
+    "guardian_name": "Dounia Izem",
+    "guardian_relationship": "Mother",
+    "notes": "Ne mange pas à la cantine"
+  },
+  {
+    "first_name": "Lamia",
+    "last_name": "Kadri",
+    "phone": "07 73 48 91 26",
+    "parent_phone": "05 58 92 35 61",
+    "guardian_name": "Bachir Kadri",
+    "guardian_relationship": "Father",
+    "notes": null
+  },
+  {
+    "first_name": "Toufik",
+    "last_name": "Loucif",
+    "phone": null,
+    "parent_phone": "06 64 51 27 86",
+    "guardian_name": "Warda Loucif",
+    "guardian_relationship": "Mother",
+    "notes": null
+  },
+  {
+    "first_name": "Hayat",
+    "last_name": "Mezhoud",
+    "phone": "06 65 67 82 39",
+    "parent_phone": "07 71 25 68 93",
+    "guardian_name": "Belkacem Mezhoud",
+    "guardian_relationship": "Grandfather",
+    "notes": "Besoins spécifiques — accompagnement scolaire"
+  },
+  {
+    "first_name": "Abdelhak",
+    "last_name": "Nait Ali",
+    "phone": null,
+    "parent_phone": "05 57 84 52 31",
+    "guardian_name": "Cherifa Nait Ali",
+    "guardian_relationship": "Mother",
+    "notes": null
+  },
+  {
+    "first_name": "Dihya",
+    "last_name": "Ouzani",
+    "phone": "05 52 34 56 71",
+    "parent_phone": "06 63 49 01 27",
+    "guardian_name": "Massinissa Ouzani",
+    "guardian_relationship": "Father",
+    "notes": null
+  },
+  {
+    "first_name": "Lokmane",
+    "last_name": "Rabhi",
+    "phone": null,
+    "parent_phone": "07 78 96 74 52",
+    "guardian_name": "Soraya Rabhi",
+    "guardian_relationship": "Mother",
+    "notes": "Suivi orthophoniste depuis 2024"
+  },
+  {
+    "first_name": "Wissam",
+    "last_name": "Sadaoui",
+    "phone": "07 78 91 23 47",
+    "parent_phone": "05 52 31 27 85",
+    "guardian_name": "Nabil Sadaoui",
+    "guardian_relationship": "Father",
+    "notes": null
+  },
+  {
+    "first_name": "Sid Ali",
+    "last_name": "Tabet",
+    "phone": null,
+    "parent_phone": "06 65 64 58 91",
+    "guardian_name": "Hacene Tabet",
+    "guardian_relationship": "Uncle",
+    "notes": null
+  },
+  {
+    "first_name": "Tinhinane",
+    "last_name": "Yousfi",
+    "phone": "06 63 46 71 24",
+    "parent_phone": "07 77 83 41 26",
+    "guardian_name": "Ferroudja Yousfi",
+    "guardian_relationship": "Grandmother",
+    "notes": "Asthme — traitement de fond"
+  },
+  {
+    "first_name": "Rachid",
+    "last_name": "Zenati",
+    "phone": null,
+    "parent_phone": "05 51 29 04 57",
+    "guardian_name": "Mokhtar Zenati",
+    "guardian_relationship": "Father",
+    "notes": null
+  },
+  {
+    "first_name": "Assia",
+    "last_name": "Boumediene",
+    "phone": "05 56 71 28 95",
+    "parent_phone": "06 66 72 35 61",
+    "guardian_name": "Zoulikha Boumediene",
+    "guardian_relationship": "Mother",
+    "notes": null
+  },
+  {
+    "first_name": "Samy",
+    "last_name": "Ait Ouali",
+    "phone": null,
+    "parent_phone": "07 74 55 68 92",
+    "guardian_name": "Mohand Ait Ouali",
+    "guardian_relationship": "Father",
+    "notes": null
+  },
+  {
+    "first_name": "Nadir",
+    "last_name": "Benbrahim",
+    "phone": "07 74 57 82 31",
+    "parent_phone": "05 53 41 26 78",
+    "guardian_name": "Houda Benbrahim",
+    "guardian_relationship": "Mother",
+    "notes": null
+  },
+  {
+    "first_name": "Nour El Houda",
+    "last_name": "Ferhaoui",
+    "phone": null,
+    "parent_phone": "06 68 97 81 24",
+    "guardian_name": "Saliha Ferhaoui",
+    "guardian_relationship": "Mother",
+    "notes": null
+  },
+  {
+    "first_name": "Sarah",
+    "last_name": "Adjeroud",
+    "phone": "06 61 23 45 67",
+    "parent_phone": "07 72 36 73 49",
+    "guardian_name": "Idir Adjeroud",
+    "guardian_relationship": "Father",
+    "notes": null
+  },
+  {
+    "first_name": "Islam",
+    "last_name": "Boudjellal",
+    "phone": null,
+    "parent_phone": "05 55 61 24 56",
+    "guardian_name": "Rachida Boudjellal",
+    "guardian_relationship": "Mother",
+    "notes": null
+  },
+  {
+    "first_name": "Marwa",
+    "last_name": "Azzouz",
+    "phone": "05 57 82 34 56",
+    "parent_phone": "06 64 58 92 37",
+    "guardian_name": "Sid Ahmed Azzouz",
+    "guardian_relationship": "Father",
+    "notes": null
+  },
+  {
+    "first_name": "Rayan",
+    "last_name": "Belloumi",
+    "phone": null,
+    "parent_phone": "07 71 28 95 63",
+    "guardian_name": "Nadjat Belloumi",
+    "guardian_relationship": "Mother",
+    "notes": null
+  }
+]

@@ -500,7 +500,21 @@ export function SchedulingModal({ isOpen, onClose, sessions, prefillDate, onCrea
                 <label className={labelCls}>Link to Group (optional, billing only)</label>
                 <Select
                   value={tGroup}
-                  onChange={(v) => { setTGroup(v); setTError(null) }}
+                  onChange={(v) => {
+                    const group = groups.find((g) => g.id === v)
+                    setTGroup(v)
+                    // A group is taught by one teacher, so linking the session
+                    // to a group picks that teacher up with it. Clearing the
+                    // group leaves the teacher alone — "no group" is a
+                    // statement about billing, not about who teaches.
+                    //
+                    // This is also what keeps the clash check honest: it reads
+                    // `tTeacher` alone, so a teacher inherited from the group
+                    // but left out of this field was a double-booking nothing
+                    // on screen would have caught.
+                    if (group?.teacher_id) setTTeacher(group.teacher_id)
+                    setTError(null)
+                  }}
                   options={[
                     { value: '', label: '— No group —' },
                     ...groups.map((g) => ({ value: g.id, label: `${g.name}${g.subject ? ` (${g.subject})` : ''}` })),
